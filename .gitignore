@@ -1,0 +1,6 @@
+dist
+Releases
+*.exe
+*.csv
+.idea
+.vscode
