@@ -21,8 +21,12 @@ jobs:
         goos: [linux, windows, darwin]
         goarch: [amd64, arm64]
         include:
+          - goos: windows
+            goarch: 386
           - goos: linux
             goarch: 386
+          - goos: linux
+            goarch: s390x
 
     steps:
     - uses: actions/checkout@v3
