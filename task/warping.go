@@ -7,9 +7,6 @@ import (
 	"encoding/hex"
 	"errors"
 	"fmt"
-	"golang.org/x/crypto/blake2s"
-	"golang.org/x/crypto/poly1305"
-	"golang.zx2c4.com/wireguard/tai64n"
 	"log"
 	"math/rand"
 	"net"
@@ -18,6 +15,10 @@ import (
 	"strconv"
 	"sync"
 	"time"
+
+	"golang.org/x/crypto/blake2s"
+	"golang.org/x/crypto/poly1305"
+	"golang.zx2c4.com/wireguard/tai64n"
 
 	"github.com/peanut996/CloudflareWarpSpeedTest/utils"
 
@@ -75,6 +76,7 @@ var (
 
 	commonIPv6CIDRs = []string{
 		"2606:4700:d0::/48",
+		"2606:4700:d1::/48",
 	}
 
 	MaxWarpPortRange = 10000
